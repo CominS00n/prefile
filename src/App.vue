@@ -11,7 +11,7 @@
         <SettingPage />
       </div>
     </div>
-    <aside class="w-2/5 border">
+    <aside class="w-2/5 border" :class="navBar ? 'block' : 'hidden'">
       <NavBar />
     </aside>
     <main class="border w-full p-6 h-fit">
@@ -21,10 +21,18 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import SettingPage from '@/components/SettingPage.vue'
+
+import configweb from '@/stores/configweb'
+
+onMounted(() => {
+  configweb()
+})
+ 
+const { navBar, toggleNavBar} = configweb()
 
 const isSetting = ref(false)
 </script>
