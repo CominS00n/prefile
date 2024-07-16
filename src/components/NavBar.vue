@@ -4,26 +4,20 @@
       <img src="" alt="##" class="h-64 w-64 object-cover border" />
     </div>
     <div class="w-full">
-      <ul class="space-y-2">
-        <li>
-          <router-link to="/" class="w-full flex items-center gap-x-4"
-            ><box-icon name="home-alt-2" class="dark:fill-[#E5E7EB]" size="20px"></box-icon
-            >Home</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/test" class="w-full flex items-center gap-x-4"
-            ><box-icon name="user-pin" class="dark:fill-[#E5E7EB]" size="20px"></box-icon
-            >About</router-link
+      <ul  v-for="item in menu_list" :key="item.link" class="space-y-2">
+        <li :class="$route.path == item.link ? 'pl-2 bg-[#f3f4f6] rounded-md dark:bg-slate-700' : ''" class="dark:bg-inherit dark:hover:bg-slate-700">
+          <router-link :to="item.link" class="w-full flex items-center gap-x-4">
+            <icon-menu :name="item.icon" class="dark:fill-slate-400" />
+            {{ $t(`menu.${item.title}`) }}</router-link
           >
         </li>
       </ul>
     </div>
     <div class="flex justify-around gap-x-3 w-full">
       <box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon>
-      <box-icon type='logo' name='facebook-circle' class="dark:fill-[#E5E7EB]"></box-icon>
-      <box-icon name='instagram' type='logo' class="dark:fill-[#E5E7EB]"></box-icon>
-      <box-icon type='logo' name='discord' class="dark:fill-[#E5E7EB]"></box-icon>
+      <box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon>
+      <box-icon name="instagram" type="logo" class="dark:fill-[#E5E7EB]"></box-icon>
+      <box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon>
     </div>
   </div>
 </template>
@@ -31,6 +25,10 @@
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
 
+import IconMenu from './icon/IconMenu.vue'
+import { menu } from '@/stores/menu'
+
+const menu_list = menu
 </script>
 
 <style scoped>
@@ -49,6 +47,8 @@ li {
 
 li:hover {
   padding-left: 8px;
+  background-color: #f3f4f6;
+  border-radius: 6px
 }
 
 li::before {
@@ -67,7 +67,8 @@ li::before {
 
 li:hover::before {
   transform: scaleY(1);
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
+
 
 </style>

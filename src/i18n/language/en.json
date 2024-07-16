@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Dark Mode"
+  },
+  "menu" :{
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hello": "Hello",
+    "welcome": "Welcome"
+  }
+}

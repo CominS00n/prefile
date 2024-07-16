@@ -2,26 +2,30 @@
   <div class="flex px-16 pt-14 h-screen space-x-2">
     <div class="fixed right-0 top-1/2 transform -translate-y-1/2 flex items-center">
       <button
-        @click="isSetting = !isSetting"
-        class="h-fit [writing-mode:vertical-lr] -rotate-180 bg-green-500 py-4 px-2 rounded-r-[10px] text-white z-[99] "
+        @click="toggleSettings"
+        class="h-fit [writing-mode:vertical-lr] !-rotate-180 bg-green-500 py-4 px-2 rounded-r-[10px] text-white z-[99]"
+        :class="isSettings ? 'block animate-fade-in-left' : ''"
       >
         <box-icon name="cog" class="animate-spin fill-white"></box-icon>Setting
       </button>
-      <div class="setting" :class="isSetting ? 'block' : 'hidden'">
+      <div
+        class="setting"
+        :class="isSettings ? 'block animate-fade-in-left' : 'hidden'"
+      >
         <SettingPage />
       </div>
     </div>
-    <aside class="w-2/5 border" :class="navBar ? 'block' : 'hidden'">
+    <aside class="w-2/5 border rounded-2xl" :class="navBar ? 'block' : 'hidden'">
       <NavBar />
     </aside>
-    <main class="border w-full p-6 h-fit">
+    <main class="w-full p-6 h-fit rounded-2xl">
       <RouterView />
     </main>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import SettingPage from '@/components/SettingPage.vue'
@@ -31,10 +35,10 @@ import configweb from '@/stores/configweb'
 onMounted(() => {
   configweb()
 })
- 
-const { navBar, toggleNavBar} = configweb()
 
-const isSetting = ref(false)
+const { navBar, toggleSettings, isSettings } = configweb()
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
