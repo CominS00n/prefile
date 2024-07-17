@@ -4,9 +4,9 @@
     <h1 class="text-5xl mt-10 font-bold w-fit">
       I'm <span class="text-green-500">{{ $t('home.title.name') }}</span>
     </h1>
-    <h1 class="text-5xl mt-10 font-bold w-fit" v-for="(position, index) in $t('home.title.position')" :key="index">
-      {{ position }}
-    </h1>
+    <!-- <h1 class="text-5xl mt-10 font-bold w-fit" v-for="i in 3" :key="i">
+      {{ $t(`home.title.position[${i - 1}]`) }}
+    </h1> -->
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit laboriosam tenetur voluptatum!
       Fugiat, dolorem culpa sequi voluptatibus et quia corrupti?
@@ -51,7 +51,6 @@ const icon_name = ref([
     color: '#38B2AC'
   }
 ])
-
 </script>
 
 <style scoped></style>
