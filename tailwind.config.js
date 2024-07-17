@@ -29,6 +29,10 @@ export default {
             transform: 'translateX(20px)'
           }
         }
+      },
+      fontFamily: {
+        'thai': ['"Prompt"', 'sans-serif'],
+        'english': ['"Inter"', 'sans-serif'],
       }
     }
   },

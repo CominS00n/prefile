@@ -11,6 +11,9 @@
   },
   "home": {
     "hello": "Hello",
-    "welcome": "Welcome"
+    "title": {
+      "name": "Sittichai Puckpoo",
+      "position": ["Software Developer", "Programmer", "Web Developer"]
+    }
   }
 }

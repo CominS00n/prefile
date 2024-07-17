@@ -1,12 +1,12 @@
 <template>
   <div class="flex justify-between h-full flex-col items-center space-y-16 px-6 pt-6 pb-3">
     <div>
-      <img src="" alt="##" class="h-64 w-64 object-cover border" />
+      <img src="" alt="" class="h-64 w-64 object-cover" />
     </div>
     <div class="w-full">
       <ul  v-for="item in menu_list" :key="item.link" class="space-y-2">
         <li :class="$route.path == item.link ? 'pl-2 bg-[#f3f4f6] rounded-md dark:bg-slate-700' : ''" class="dark:bg-inherit dark:hover:bg-slate-700">
-          <router-link :to="item.link" class="w-full flex items-center gap-x-4">
+          <router-link :to="item.link" class="w-full h-full flex items-center gap-x-4">
             <icon-menu :name="item.icon" class="dark:fill-slate-400" />
             {{ $t(`menu.${item.title}`) }}</router-link
           >

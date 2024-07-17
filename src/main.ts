@@ -1,4 +1,5 @@
 import './assets/style.css'
+import './assets/languages.css'
 import 'boxicons'
 
 import { createApp } from 'vue'
