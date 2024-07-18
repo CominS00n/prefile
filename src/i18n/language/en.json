@@ -13,7 +13,11 @@
     "hello": "Hello",
     "title": {
       "name": "Sittichai Puckpoo",
-      "position": ["Software Developer", "Programmer", "Web Developer"]
+      "position": {
+        "developer": "Software Developer",
+        "programmer": "Programmer",
+        "web": "Web Developer"
+      }
     }
   }
 }

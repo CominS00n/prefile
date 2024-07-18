@@ -2,7 +2,9 @@
   <main class="container mx-auto">
     <h3 class="text-2xl mt-10">{{ $t('home.hello') }}</h3>
     <h1 class="text-5xl mt-10 font-bold w-fit">
-      I'm <span class="text-green-500">{{ $t('home.title.name') }}</span>
+      I'm <span class="text-green-500">
+        {{ $t(`home.title.position.${currentPosition}`) }}
+      </span>
     </h1>
     <!-- <h1 class="text-5xl mt-10 font-bold w-fit" v-for="i in 3" :key="i">
       {{ $t(`home.title.position[${i - 1}]`) }}
@@ -23,11 +25,33 @@
         </li>
       </ul>
     </div>
+
+    <Timeline />
+
   </main>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted} from 'vue'
+
+import Timeline from '@/components/Timeline.vue'
+
+const position = ref(['developer', 'programmer', 'web'])
+const currentPosition = ref(position.value[0])
+
+let interval: number
+
+onMounted(() => {
+  let index = 0
+  interval = setInterval(() => {
+    index = (index + 1) % position.value.length
+    currentPosition.value = position.value[index]
+  }, 5000)
+})
+
+onUnmounted(() => {
+  clearInterval(interval)
+})
 
 const icon_name = ref([
   {
