@@ -14,13 +14,18 @@
             clip-rule="evenodd"
           />
         </svg> -->
+        if (index === (timeline.length-1))) {
+          <box-icon name='check-circle'></box-icon>
+        } else {
+            <box-icon name='circle' ></box-icon>
+        }
       </div>
       <div :class="index % 2 === 0 ? 'timeline-start mb-10 md:text-end' : 'timeline-end mb-10'">
         <time class="font-mono italic">{{ item.title }}</time>
         <div class="text-md font-black">{{ item.subtitle }}</div>
         <p class="text-sm">{{ item.content }}</p>
       </div>
-      <hr :class="index === (timeline.length-1) ? 'hidden' : ''" />
+      <hr :class="index === (timeline.length-1) ? 'hidden' : 'bg-green-400'" />
     </li>
   </ul>
   
