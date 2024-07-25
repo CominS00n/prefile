@@ -2,7 +2,7 @@ export const menu = [
     {
         title: 'home',
         icon: 'home',
-        link: '/home'
+        link: '/'
     },
     {
         title: 'about',
