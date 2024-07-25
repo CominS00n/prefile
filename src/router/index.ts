@@ -4,15 +4,31 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/test',
       name: 'test',
-      component: () => import('../views/ConvertDate.vue')
-    }
+      redirect: "/test/blog",
+      children: [
+        {
+          path: 'blog',
+          name: 'blog',
+          component: () => import('../views/BlogData.vue')
+        },
+        {
+          path: 'convert',
+          name: 'convert',
+          component: () => import('../views/ConvertDate.vue')
+        }
+      ],
+      meta: {
+        breadcrumb: 'Test',
+        requiresAuth: true
+      }
+    },
   ]
 })
 

@@ -27,7 +27,7 @@
   </label>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 
 const isDarkMode = ref(false)
@@ -39,8 +39,12 @@ const toggleTheme = () => {
   document.documentElement.classList.toggle('dark', isDarkMode.value)
 }
 
+
 onMounted(() => {
-  document.querySelector('html').setAttribute('data-theme', theme.value)
+  const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  isDarkMode.value = darkMode
+  theme.value = darkMode ? 'dark' : 'light'
+  document.documentElement.classList.toggle('dark', darkMode)
 })
 
 watch(theme, (newTheme) => {

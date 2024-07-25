@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-between h-full flex-col items-center space-y-16 px-6 pt-6 pb-3">
-    <div>
+  <div class="space-y-9 px-6 py-10 shadow-lg border rounded-2xl">
+    <div class="w-full flex flex-col items-center">
       <img src="/image/image0.jpg" alt="" class="h-64 w-64 object-cover object-top rounded-3xl" />
       <h1 class="text-3xl mt-4 font-bold w-fit">{{ $t('home.title.name') }}</h1>
     </div>
@@ -18,10 +18,10 @@
       </ul>
     </div>
     <div class="flex justify-around gap-x-3 w-full">
-      <box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon>
-      <box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon>
-      <box-icon name="instagram" type="logo" class="dark:fill-[#E5E7EB]"></box-icon>
-      <box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon>
+      <a href="https://github.com/CominS00n/" target="_blank"><box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <a href="" target="_blank"><box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <a href="" target="_blank"><box-icon type="logo" name="instagram" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <a href="" target="_blank"><box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon></a>
     </div>
   </div>
 </template>

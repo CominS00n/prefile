@@ -5,7 +5,7 @@
     <h1 class="text-xl text-center">{{ $t('settings.title') }}</h1>
     <div class="flex justify-between h-9 items-center">
       <label>{{ $t('settings.theme') }}</label>
-      <ThemeBtn />
+      <ChangTheme />
     </div>
     <div class="flex justify-between h-9 items-center">
       <label>{{ $t('settings.language') }}</label>
@@ -22,7 +22,7 @@
 import { onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import ThemeBtn from '@/components/button/ThemeBtn.vue'
+import ChangTheme from './buttons/ChangTheme.vue';
 
 const { locale } = useI18n()
 
