@@ -5,10 +5,10 @@
       <h1 class="text-3xl mt-4 font-bold w-fit">{{ $t('home.title.name') }}</h1>
     </div>
     <div class="w-full">
-      <ul v-for="item in menu_list" :key="item.link" class="space-y-2">
+      <ul v-for="item in menu_list" :key="item.link">
         <li
           :class="$route.path == item.link ? 'pl-2 bg-[#f3f4f6] rounded-md dark:bg-slate-700' : ''"
-          class="dark:bg-inherit dark:hover:bg-slate-700"
+          class="dark:bg-inherit dark:hover:bg-slate-700 mt-2"
         >
           <router-link :to="item.link" class="w-full h-full flex items-center gap-x-4">
             <icon-menu :name="item.icon" class="dark:fill-slate-400" />

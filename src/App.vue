@@ -15,7 +15,7 @@
     <div class="w-[480px]" :class="navBar ? 'block' : 'hidden'">
       <NavBar />
     </div>
-    <div class="w-full h-screen py-5 overflow-y-auto">
+    <div class="content w-full h-screen py-5 overflow-y-auto">
       <RouterView />
     </div>
   </div>
@@ -35,3 +35,14 @@ onMounted(() => {
 
 const { navBar, toggleSettings, isSettings } = configweb()
 </script>
+
+<style scoped>
+.content::-webkit-scrollbar {
+  display: none;
+}
+.content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+</style>

@@ -9,9 +9,9 @@
     </div>
     <div class="flex justify-between h-9 items-center">
       <label>{{ $t('settings.language') }}</label>
-      <select v-model="$i18n.locale" @change="updateBodyClass" class="border rounded-md p-1">
+      <select v-model="currentLocale" @change="updateBodyClass" class="border rounded-md p-1">
         <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
-          {{ locale }}
+          {{ locale.toUpperCase() }}
         </option>
       </select>
     </div>
@@ -19,26 +19,25 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, watch } from 'vue'
+import { onMounted, watch, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import ChangTheme from './buttons/ChangTheme.vue';
 
 const { locale } = useI18n()
+const currentLocale = ref(localStorage.getItem('locale') || locale.value)
 
 const updateBodyClass = () => {
-  document.body.className = locale.value
+  document.body.className = currentLocale.value
+  localStorage.setItem('locale', currentLocale.value)
 }
 
 onMounted(() => {
   updateBodyClass()
 })
 
-watch(locale, () => {
+watch(currentLocale, (newLocale) => {
+  locale.value = newLocale
   updateBodyClass()
 })
 </script>
-
-<style scoped>
-
-</style>

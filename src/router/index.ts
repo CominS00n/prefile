@@ -11,23 +11,7 @@ const router = createRouter({
     {
       path: '/test',
       name: 'test',
-      redirect: "/test/blog",
-      children: [
-        {
-          path: 'blog',
-          name: 'blog',
-          component: () => import('../views/BlogData.vue')
-        },
-        {
-          path: 'convert',
-          name: 'convert',
-          component: () => import('../views/ConvertDate.vue')
-        }
-      ],
-      meta: {
-        breadcrumb: 'Test',
-        requiresAuth: true
-      }
+      component: () => import('../views/ConvertDate.vue'),
     },
   ]
 })

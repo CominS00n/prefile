@@ -4,13 +4,13 @@ import English from './language/en.json' // Importing the English language file
 import Thai from './language/th.json' // Importing the Thai language file
 
 const messages = {
-    English,
-    Thai
+    en: English,
+    th: Thai
 }
 
 export default createI18n({
-    locale: 'English',
-    fallbackLocale: 'English',
+    locale: localStorage.getItem('locale') || 'en',
+    fallbackLocale: 'en',
     messages,
     legacy: false
 })

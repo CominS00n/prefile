@@ -30,21 +30,32 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 
-const isDarkMode = ref(false)
 const theme = ref('light')
 
+console.log(document.documentElement.classList)
+
 const toggleTheme = () => {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
-  isDarkMode.value = !isDarkMode.value
-  document.documentElement.classList.toggle('dark', isDarkMode.value)
+  if (theme.value === 'dark') {
+    theme.value = 'light'
+    document.documentElement.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  } else {
+    theme.value = 'dark'
+    document.documentElement.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  }
 }
 
-
 onMounted(() => {
-  const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  isDarkMode.value = darkMode
-  theme.value = darkMode ? 'dark' : 'light'
-  document.documentElement.classList.toggle('dark', darkMode)
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    theme.value = savedTheme
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
 })
 
 watch(theme, (newTheme) => {
