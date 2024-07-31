@@ -16,13 +16,13 @@ export default {
           },
           '100%': {
             opacity: '1',
-            transform: 'translateX(0)',
+            transform: 'translateX(0)'
           }
         },
         'fade-out-right': {
           '0%': {
             opacity: '1',
-            transform: 'translateX(0)',
+            transform: 'translateX(0)'
           },
           '100%': {
             opacity: '0',
@@ -31,11 +31,12 @@ export default {
         }
       },
       fontFamily: {
-        'thai': ['"Prompt"', 'sans-serif'],
-        'english': ['"Inter"', 'sans-serif'],
+        thai: ['"Prompt"', 'sans-serif'],
+        english: ['"Inter"', 'sans-serif']
       }
     }
   },
+  // eslint-disable-next-line no-undef
   plugins: [require('daisyui')],
   daisyui: {
     themes: ['light', 'dark']
