@@ -1,28 +1,30 @@
 <template>
-    <h3 class="text-2xl ">{{ $t('home.hello') }}</h3>
-    <h1 class="text-5xl font-bold w-fit">
-      I'm
-      <span class="text-green-500">
-        {{ $t(`home.title.position.${currentPosition}`) }}
-      </span>
-    </h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit laboriosam tenetur voluptatum!
-      Fugiat, dolorem culpa sequi voluptatibus et quia corrupti?
-    </p>
+  <h3 class="text-2xl">{{ $t('home.hello') }}</h3>
+  <h1 class="text-5xl font-bold w-fit">
+    I'm
+    <span class="text-green-500">
+      {{ $t(`home.title.position.${currentPosition}`) }}
+    </span>
+  </h1>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit laboriosam tenetur voluptatum!
+    Fugiat, dolorem culpa sequi voluptatibus et quia corrupti?
+  </p>
 
-    <div>
-      <ul class="grid grid-cols-5">
-        <li
-          class="flex items-center justify-center h-20 border-r last:border-none"
-          v-for="icon in icon_name"
-          :key="icon.name"
-        >
-          <box-icon type="logo" :name="icon.name" size="40px" :color="icon.color"></box-icon>
-        </li>
-      </ul>
-    </div>
-    <Timeline />
+  <div>
+    <ul class="grid grid-cols-5">
+      <li
+        class="flex items-center justify-center h-20 border-r last:border-none"
+        v-for="icon in icon_name"
+        :key="icon.name"
+      >
+        <box-icon type="logo" :name="icon.name" size="40px" :color="icon.color"></box-icon>
+      </li>
+    </ul>
+  </div>
+  <div class="flex justify-center">
+    <Timeline class="drop-shadow-xl" />
+  </div>
 </template>
 
 <script lang="ts" setup>

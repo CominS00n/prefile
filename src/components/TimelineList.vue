@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-3/4 py-5">
     <ul
       class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
       v-for="(item, index) in timeline"
