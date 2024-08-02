@@ -10,8 +10,8 @@ export const menu = [
         link: '/test'
     },
     {
-        title: 'contact',
-        icon: 'envelope',
-        link: '/contact'
-    }
+        title: 'experience',
+        icon: 'time',
+        link: '/experience'
+    },
 ]

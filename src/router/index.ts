@@ -13,6 +13,12 @@ const router = createRouter({
       name: 'test',
       component: () => import('../views/ConvertDate.vue'),
     },
+    {
+      path: '/experience',
+      name: 'experience',
+      component: () => import('../views/ExperienceView.vue'),
+    },
+
   ]
 })
 

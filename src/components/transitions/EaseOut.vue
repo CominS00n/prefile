@@ -1,7 +1,7 @@
 <template>
   <TransitionRoot
     appear
-    :show="porps.show"
+    :show="true"
     enter="transform transition ease-in-out duration-500 sm:duration-700"
     enterFrom="translate-x-full"
     enterTo="translate-x-0"
@@ -13,15 +13,6 @@
   </TransitionRoot>
 </template>
 
-<script setup>
-import { defineProps } from 'vue'
+<script setup lang="ts">
 import { TransitionRoot } from '@headlessui/vue'
-
-const porps = defineProps({
-    show: {
-        type: Boolean,
-        default: true,
-        rqeuired: true
-    }
-})
 </script>

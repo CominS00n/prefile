@@ -7,7 +7,7 @@
   "menu" :{
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "experience": "Experience"
   },
   "home": {
     "hello": "Hello",
@@ -19,5 +19,8 @@
         "web": "Web Developer"
       }
     }
+  },
+  "experience": {
+    "title": "Experience"
   }
 }

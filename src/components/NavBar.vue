@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-9 px-6 py-10 shadow-lg border rounded-2xl">
+  <div class="flex flex-col justify-between p-6 shadow-lg border rounded-2xl h-full">
     <div class="w-full flex flex-col items-center">
       <img src="/image/image0.jpg" alt="" class="h-64 w-64 object-cover object-top rounded-3xl" />
       <h1 class="text-3xl mt-4 font-bold w-fit">{{ $t('home.title.name') }}</h1>
@@ -19,9 +19,9 @@
     </div>
     <div class="flex justify-around gap-x-3 w-full">
       <a href="https://github.com/CominS00n/" target="_blank"><box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon></a>
-      <a href="" target="_blank"><box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon></a>
-      <a href="" target="_blank"><box-icon type="logo" name="instagram" class="dark:fill-[#E5E7EB]"></box-icon></a>
-      <a href="" target="_blank"><box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <a href="https://facebook.com/sitthichai.puckpoo/" target="_blank"><box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <a href="https://instagram.com/comings00n" target="_blank"><box-icon type="logo" name="instagram" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <!-- <a href="" target="_blank"><box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon></a> -->
     </div>
     <ChangTheme class="hidden" />
   </div>
