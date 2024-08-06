@@ -1,10 +1,11 @@
 <template>
   <EaseOut>
     <h3 class="text-2xl">{{ $t('home.hello') }}</h3>
-    <h1 class="text-5xl font-bold w-fit">
+    <h1 class="text-5xl font-bold w-fit flex gap-x-3">
       I'm
       <span class="text-green-500">
-        {{ $t(`home.title.position.${currentPosition}`) }}
+        <VueWriter v-if="locale === 'en'" :array="position_en" :typeSpeed="70" :delay="5000" />
+        <VueWriter v-if="locale === 'th'" :array="position_th" :typeSpeed="70" :delay="5000" />
       </span>
     </h1>
     <p>
@@ -27,47 +28,20 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import EaseOut from '@/components/transitions/EaseOut.vue'
 
-const position = ref(['developer', 'programmer', 'web'])
-const currentPosition = ref(position.value[0])
+const position_en = ref(['Software Developer', 'Programmer', 'Web Developer'])
+const position_th = ref(['นักพัฒนาซอฟต์แวร์', 'โปรแกรมเมอร์', 'นักพัฒนาเว็บ'])
+import { useI18n } from 'vue-i18n'
 
-let interval: number
-
-onMounted(() => {
-  let index = 0
-  interval = setInterval(() => {
-    index = (index + 1) % position.value.length
-    currentPosition.value = position.value[index]
-  }, 5000)
-})
-
-onUnmounted(() => {
-  clearInterval(interval)
-})
+const { locale } = useI18n()
 
 const icon_name = ref([
-  {
-    name: 'typescript',
-    color: '#0076C6'
-  },
-  {
-    name: 'javascript',
-    color: '#F7D800'
-  },
-  {
-    name: 'vuejs',
-    color: '#41B883'
-  },
-  {
-    name: 'python',
-    color: '#3776AB'
-  },
-  {
-    name: 'tailwind-css',
-    color: '#38B2AC'
-  }
+  { name: 'typescript', color: '#0076C6' },
+  { name: 'javascript', color: '#F7D800' },
+  { name: 'vuejs', color: '#41B883' },
+  { name: 'python', color: '#3776AB' },
+  { name: 'tailwind-css', color: '#38B2AC' }
 ])
 </script>

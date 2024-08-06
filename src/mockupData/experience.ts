@@ -42,7 +42,7 @@ export const experienceDataTh = [
     {
         title: '2567',
         optional: 'เม.ย.',
-        subtitle: 'สำเร็จการศึกษาจากมทร.ตรัง',
+        subtitle: 'สำเร็จการศึกษาจากมทร.ธัญบุรี',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {

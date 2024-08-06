@@ -2,9 +2,9 @@
   <EaseOut>
     <div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt, recusandae, velit ut
-        aperiam beatae quibusdam nulla exercitationem impedit qui officiis suscipit asperiores,
-        explicabo voluptatum laborum ratione nesciunt iste ad?F
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis aspernatur, doloremque
+        molestiae maxime vitae magni porro at. Nihil voluptatibus repellat iusto quod libero minus
+        perferendis, expedita neque tempore ipsam adipisci!
       </p>
     </div>
   </EaseOut>
