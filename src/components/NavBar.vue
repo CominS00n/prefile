@@ -7,20 +7,34 @@
     <div class="w-full">
       <ul v-for="item in menu_list" :key="item.link">
         <li
-          :class="$route.path == item.link ? 'pl-2 bg-[#f3f4f6] rounded-md dark:bg-slate-700 text-green-500' : ''"
+          :class="
+            $route.path == item.link
+              ? 'pl-2 bg-[#f3f4f6] rounded-md dark:bg-slate-700 text-green-500'
+              : ''
+          "
           class="dark:bg-inherit dark:hover:bg-slate-700 mt-2"
         >
           <router-link :to="item.link" class="w-full h-full flex items-center gap-x-4">
-            <icon-menu :name="item.icon" class="dark:fill-slate-400" :class="$route.path == item.link ? 'fill-green-500' : ''" />
+            <icon-menu
+              :name="item.icon"
+              class="dark:fill-slate-400"
+              :class="$route.path == item.link ? 'fill-green-500' : ''"
+            />
             {{ $t(`menu.${item.title}`) }}</router-link
           >
         </li>
       </ul>
     </div>
     <div class="flex justify-around gap-x-3 w-full">
-      <a href="https://github.com/CominS00n/" target="_blank"><box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon></a>
-      <a href="https://facebook.com/sitthichai.puckpoo/" target="_blank"><box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon></a>
-      <a href="https://instagram.com/comings00n" target="_blank"><box-icon type="logo" name="instagram" class="dark:fill-[#E5E7EB]"></box-icon></a>
+      <a href="https://github.com/CominS00n/" target="_blank"
+        ><box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon
+      ></a>
+      <a href="https://facebook.com/sitthichai.puckpoo/" target="_blank"
+        ><box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon
+      ></a>
+      <a href="https://instagram.com/comings00n" target="_blank"
+        ><box-icon type="logo" name="instagram" class="dark:fill-[#E5E7EB]"></box-icon
+      ></a>
       <!-- <a href="" target="_blank"><box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon></a> -->
     </div>
     <ChangTheme class="hidden" />

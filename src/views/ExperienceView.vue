@@ -4,7 +4,7 @@
       {{ $t('experience.title') }}
     </h1>
     <!-- content english language -->
-    <div v-if="locale === 'en'"  class="w-3/4 py-5 drop-shadow-lg">
+    <div v-if="locale === 'en'" class="w-3/4 py-5 drop-shadow-lg">
       <ul
         class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
         v-for="(item, index) in experienceEn"
@@ -40,7 +40,7 @@
     </div>
 
     <!-- content thai language -->
-    <div v-if="locale === 'th'"  class="w-3/4 py-5 drop-shadow-lg">
+    <div v-if="locale === 'th'" class="w-3/4 py-5 drop-shadow-lg">
       <ul
         class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
         v-for="(item, index) in experienceDataTh"

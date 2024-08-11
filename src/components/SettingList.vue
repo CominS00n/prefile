@@ -1,5 +1,9 @@
 <template>
-  <div v-if="isSettings" @click="toggleSettings" class="relative bg-black opacity-50 h-svh w-svw"></div>
+  <div
+    v-if="isSettings"
+    @click="toggleSettings"
+    class="relative bg-black opacity-50 h-svh w-svw"
+  ></div>
 
   <div class="fixed right-0 top-1/2 transform -translate-y-1/2 flex items-center z-[999]">
     <button

@@ -1,5 +1,5 @@
 <template>
-  <box-icon :name='props.name'></box-icon>
+  <box-icon :name="props.name"></box-icon>
 </template>
 <script lang="ts" setup>
 import { defineProps } from 'vue'

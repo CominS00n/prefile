@@ -1,8 +1,16 @@
 <template>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item last:text-gray-400 after:content-['/'] last:after:content-none" v-for="(breadcrumb, index) in breadcrumbs" :key="index">
-        <router-link :to="breadcrumb.path" :class="index === breadcrumbs.length - 1 ? 'pointer-events-none' : ''">{{ breadcrumb.name }}</router-link>
+      <li
+        class="breadcrumb-item last:text-gray-400 after:content-['/'] last:after:content-none"
+        v-for="(breadcrumb, index) in breadcrumbs"
+        :key="index"
+      >
+        <router-link
+          :to="breadcrumb.path"
+          :class="index === breadcrumbs.length - 1 ? 'pointer-events-none' : ''"
+          >{{ breadcrumb.name }}</router-link
+        >
       </li>
     </ol>
   </nav>

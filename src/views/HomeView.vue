@@ -4,8 +4,8 @@
     <h1 class="text-5xl font-bold w-fit flex gap-x-3">
       I'm
       <span class="text-green-500">
-        <VueWriter v-if="locale === 'en'" :array="position_en" :typeSpeed="70" :delay="5000" />
-        <VueWriter v-if="locale === 'th'" :array="position_th" :typeSpeed="70" :delay="5000" />
+        <!-- <VueWriter v-if="locale === 'en'" :array="position_en" :typeSpeed="70" :delay="5000" />
+        <VueWriter v-if="locale === 'th'" :array="position_th" :typeSpeed="70" :delay="5000" /> -->
       </span>
     </h1>
     <p>

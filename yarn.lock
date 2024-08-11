@@ -727,6 +727,13 @@
   dependencies:
     undici-types "~5.26.4"
 
+"@types/vue-writer@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/@types/vue-writer/-/vue-writer-1.2.0.tgz"
+  integrity sha512-wZFLQBme71QB914WAAc65MrvXM5g1yzrfVE3OH71gtknUNlxWqFfot9PrDLu0elXU09ynz/NU72g5v+aYpxCSw==
+  dependencies:
+    vue "^3.0.5"
+
 "@typescript-eslint/eslint-plugin@^7.1.1":
   version "7.16.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-7.16.0.tgz"
@@ -1797,14 +1804,13 @@ fraction.js@^4.3.7:
     axios "^1.7.2"
     boxicons "^2.1.4"
     buffer "^6.0.3"
-    frontend "file:C:/Users/sitth/AppData/Local/Yarn/Cache/v6/npm-frontend-0.0.0-d1407797-a697-49aa-bec6-fc89383b160c-1722930869618/node_modules/frontend"
+    frontend "file:C:/Users/sitth/AppData/Local/Yarn/Cache/v6/npm-frontend-0.0.0-da32ceae-c86e-4070-98f5-a717df2f4054-1723392444522/node_modules/frontend"
     pinia "^2.1.7"
     postcss "^8.4.39"
     tailwindcss "^3.4.4"
     vue "^3.4.29"
     vue-i18n "9"
     vue-router "^4.3.3"
-    vue-writer "^2.0.2"
 
 fs-extra@^11.2.0:
   version "11.2.0"
@@ -3224,12 +3230,7 @@ vue-tsc@^2.0.21:
     "@vue/language-core" "2.0.26"
     semver "^7.5.4"
 
-vue-writer@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/vue-writer/-/vue-writer-2.0.2.tgz#90fef65b4a4d1d74a30e6d6e8c76a615698ca480"
-  integrity sha512-k3Zos5f86REHoY6XRGjEHArUsd7EjUAUu0ehpPWnkHzbc9nPmzboZfw3PmPe9thN8L/QAJve69rHcUU+llFM/g==
-
-vue@^3.4.29:
+vue@^3.0.5, vue@^3.4.29:
   version "3.4.31"
   resolved "https://registry.npmjs.org/vue/-/vue-3.4.31.tgz"
   integrity sha512-njqRrOy7W3YLAlVqSKpBebtZpDVg21FPoaq1I7f/+qqBThK9ChAIjkRWgeP6Eat+8C+iia4P3OYqpATP21BCoQ==
