@@ -26,13 +26,13 @@
       </ul>
     </div>
     <div class="flex justify-around gap-x-3 w-full">
-      <a href="https://github.com/CominS00n/" target="_blank"
+      <a href="https://www.github.com/CominS00n/" target="_blank"
         ><box-icon type="logo" name="github" class="dark:fill-[#E5E7EB]"></box-icon
       ></a>
-      <a href="https://facebook.com/sitthichai.puckpoo/" target="_blank"
+      <a href="https://www.facebook.com/sitthichai.puckpoo/" target="_blank"
         ><box-icon type="logo" name="facebook-circle" class="dark:fill-[#E5E7EB]"></box-icon
       ></a>
-      <a href="https://instagram.com/comings00n" target="_blank"
+      <a href="https://www.instagram.com/comigs00n__" target="_blank"
         ><box-icon type="logo" name="instagram" class="dark:fill-[#E5E7EB]"></box-icon
       ></a>
       <!-- <a href="" target="_blank"><box-icon type="logo" name="discord" class="dark:fill-[#E5E7EB]"></box-icon></a> -->
